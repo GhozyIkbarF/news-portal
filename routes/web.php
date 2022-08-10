@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\BeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,9 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [BeritaController::class, 'index']);
+
+Route::get('/homepage', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
