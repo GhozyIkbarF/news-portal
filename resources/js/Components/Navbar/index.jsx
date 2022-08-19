@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Modal from "./modal.jsx";
 import { useState } from "react";
+import Logo from "../../assets/logo.png";
 
 export default function index() {
     const [isOpen, setIsOpen] = useState(false);
@@ -60,12 +62,12 @@ export default function index() {
                         <div className="flex-shrink-0 flex items-center">
                             <img
                                 className="block lg:hidden h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                                src={Logo}
                                 alt="Workflow"
                             ></img>
                             <img
                                 className="hidden lg:block h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                                src={Logo}
                                 alt="Workflow"
                             ></img>
                         </div>
