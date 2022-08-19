@@ -105,7 +105,7 @@ export default function index() {
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                         <button
                             type="button"
-                            className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                            className=" p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                         >
                             <span className="sr-only">View notifications</span>
 
@@ -156,7 +156,7 @@ export default function index() {
                 <div className="px-2 pt-2 pb-3 space-y-1">
                     <a
                         href="#"
-                        className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        className=" text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page"
                     >
                         Dashboard
@@ -166,21 +166,27 @@ export default function index() {
                         href="#"
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        Team
+                        Stories
                     </a>
 
                     <a
                         href="#"
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        Projects
+                        Forum
                     </a>
 
                     <a
                         href="#"
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        Calendar
+                        Store
+                    </a>
+                    <a
+                        href="#"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    >
+                        Contact
                     </a>
                 </div>
             </div>
