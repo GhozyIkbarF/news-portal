@@ -15,10 +15,10 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        return inertia:: render('Homepage', [
+        return inertia::render('Homepage', [
             'beritas' => berita::all(),
-            'title' => "Berita HOT",
-            'description' => "skandal Arul sambo",
+            'title' => "",
+            'description' => "",
         ]);
     }
 
