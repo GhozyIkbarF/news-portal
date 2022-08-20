@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Modal from "./modal.jsx";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/logo.png";
 
 export default function index() {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
-
+    console.log(isOpen)
     document.addEventListener("click", (e) => {
         const target = e.target;
         if (isOpen == true && !target.closest(".btn-modal")) {
@@ -20,7 +19,7 @@ export default function index() {
     });
     
     return (
-        <nav className="bg-white">
+        <nav className="bg-white w-full">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -79,33 +78,33 @@ export default function index() {
                         </div>
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4">
-                                <Link
-                                    to="/"
-                                    className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold"
+                                <NavLink
+                                    to="/home"
+                                    className={({ isActive }) => (isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-bold' : 'text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold')}
                                 >
-                                    Stories
-                                </Link>
+                                    Home Page
+                                </NavLink>
 
-                                <Link
+                                <NavLink
                                     to="/"
-                                    className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold"
+                                    className={({ isActive }) => (isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-bold' : 'text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold')}
                                 >
                                     Forum
-                                </Link>
+                                </NavLink>
 
-                                <Link
+                                <NavLink
                                     to="/"
-                                    className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold"
+                                    className={({ isActive }) => (isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-bold' : 'text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold')}
                                 >
                                     Store
-                                </Link>
+                                </NavLink>
 
-                                <Link
+                                <NavLink
                                     to="/"
-                                    className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold"
+                                    className={({ isActive }) => (isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-bold' : 'text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold')}
                                 >
                                     Contact
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -166,40 +165,40 @@ export default function index() {
             <div className="sm:hidden" id="mobile-menu">
                 {isOpen2 ? 
                     <div className="px-2 pt-2 pb-3 space-y-1">
-                    <Link
+                    <NavLink
                         to="/"
                         className=" text-gray-500 block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page"
                     >
                         Dashboard
-                    </Link>
+                    </NavLink>
 
-                    <Link
+                    <NavLink
                         to="/"
                         className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                         Stories
-                    </Link>
+                    </NavLink>
 
-                    <Link
+                    <NavLink
                         to="/"
                         className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                         Forum
-                    </Link>
+                    </NavLink>
 
-                    <Link
+                    <NavLink
                         to="/"
                         className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                         Store
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         to="/"
                         className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                         Contact
-                    </Link>
+                    </NavLink>
                 </div> : null}
                 
             </div>
