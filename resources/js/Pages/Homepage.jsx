@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
 import Navbar from "../Components/Navbar/index";
+import { useState, useEffect } from "react";
 
 
 export default function Homepage(props) {
-    console.log(props)
+
     return (
         <BrowserRouter>
             <div className="flex flex-col justify-center align-center">
