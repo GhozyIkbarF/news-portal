@@ -23,7 +23,6 @@ export default function Homepage(props) {
                 <div className="flex flex-col flex-wrap justify-center align-center ">
                     <h1>{props.title}</h1>
                     <p>{props.description}</p>
-                    <p className="lg:text-9xl sm:text-sm md:text-6xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni labore omnis nesciunt beatae culpa sit totam sunt vitae debitis? Dolor iure at temporibus, aperiam autem tenetur modi sapiente praesentium architecto.</p>
                 </div>
             </div>
         </BrowserRouter>
