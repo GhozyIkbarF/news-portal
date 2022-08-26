@@ -1,13 +1,16 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar/index";
+import Subscribe from '../Components/Subscribe/index'
+import Footer from "../Components/Footer"
 import BackToTop from "../Components/Button/index";
 import Home from "./Home";
+import data from '../Data/index'
 
 
 export default function Homepage(props) {
-    console.log(props);
+
     return (
         <BrowserRouter>
             <div className="flex flex-col items-center min-h-screen">
@@ -19,11 +22,8 @@ export default function Homepage(props) {
                         {/* <Route path="about" element={<About />} /> */}
                     </Routes>
                 </div>
-
-                <div className="flex flex-col flex-wrap justify-center align-center ">
-                    <h1>{props.title}</h1>
-                    <p>{props.description}</p>
-                </div>
+                {/* {useLocation().pathname == '/home' ? <Subscribe /> : null} */}
+                <Footer />
             </div>
         </BrowserRouter>
 
